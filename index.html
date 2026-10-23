@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,31 +18,91 @@
 
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
+    <meta
+      name="description"
+      content="ポケカの実物対戦をスマホ1台でサポート。ダメカン、特殊状態、対戦タイマー、コイントス、操作履歴をまとめて管理できる無料の非公式アプリです。"
+    />
+    <meta name="theme-color" content="#132B55" />
+    <link
+      rel="canonical"
+      href="https://kbnstudio.github.io/tcg-battle-support-web/"
+    />
+    <link rel="help" href="about/" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="TCGバトルサポート - ポケカ対戦ダメカン・タイマー"
+    />
+    <meta
+      property="og:description"
+      content="ダメカン・特殊状態・対戦タイマー・コイントスを、対面2人でも1人でも直感操作。"
+    />
+    <meta
+      property="og:url"
+      content="https://kbnstudio.github.io/tcg-battle-support-web/"
+    />
+    <meta
+      property="og:image"
+      content="https://kbnstudio.github.io/tcg-battle-support-web/icons/Icon-512.png"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary" />
 
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta
       name="apple-mobile-web-app-title"
-      content="TCG Battle Support"
+      content="TCGバトルサポート"
     />
     <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>TCG Battle Support</title>
+    <title>TCGバトルサポート - ポケカ対戦ダメカン・タイマー</title>
     <link rel="manifest" href="manifest.json" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TCGバトルサポート",
+        "alternateName": "TCG Battle Support",
+        "description": "ポケカの実物対戦で使えるダメカン、特殊状態、対戦タイマー、コイントスの非公式サポートアプリです。",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Android",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "JPY"
+        },
+        "url": "https://kbnstudio.github.io/tcg-battle-support-web/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport",
+        "image": "https://kbnstudio.github.io/tcg-battle-support-web/icons/Icon-512.png",
+        "inLanguage": ["ja", "en", "zh-Hant", "ko"]
+      }
+    </script>
 
     <script>
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "646366552" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
+      const serviceWorkerVersion = "2047296399" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
   </head>
   <body>
+    <noscript>
+      <main>
+        <h1>TCGバトルサポート</h1>
+        <p>
+          ポケカの実物対戦で使える、ダメカン・特殊状態・対戦タイマー・コイントスの非公式サポートアプリです。
+        </p>
+        <p><a href="about/">アプリの機能と使い方を見る</a></p>
+      </main>
+    </noscript>
     <script>
       window.addEventListener("load", function (ev) {
         // Download main.dart.js
