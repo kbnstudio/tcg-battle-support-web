@@ -1,69 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
-    <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-    <base href="/tcg-battle-support-web/" />
-
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta
-      name="description"
-      content="ポケカの実物対戦をスマホ1台でサポート。ダメカン、特殊状態、対戦タイマー、コイントス、操作履歴をまとめて管理できる無料の非公式アプリです。"
-    />
-    <meta name="theme-color" content="#132B55" />
-    <link
-      rel="canonical"
-      href="https://kbnstudio.github.io/tcg-battle-support-web/"
-    />
-    <link rel="help" href="about/" />
-
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="TCGバトルサポート - ポケカ対戦ダメカン・タイマー"
-    />
-    <meta
-      property="og:description"
-      content="ダメカン・特殊状態・対戦タイマー・コイントスを、対面2人でも1人でも直感操作。"
-    />
-    <meta
-      property="og:url"
-      content="https://kbnstudio.github.io/tcg-battle-support-web/"
-    />
-    <meta
-      property="og:image"
-      content="https://kbnstudio.github.io/tcg-battle-support-web/icons/Icon-512.png"
-    />
-    <meta property="og:locale" content="ja_JP" />
-    <meta name="twitter:card" content="summary" />
-
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="TCGバトルサポート"
-    />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
-
-    <!-- Favicon -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TCGバトルサポート - ポケカ対戦補助アプリ</title>
+    <meta name="description" content="ポケカの実物対戦をスマホ1台でサポート。ダメカン、特殊状態、対戦タイマー、コイントス、操作履歴をまとめて管理できる無料の非公式Androidアプリです。" />
+    <meta name="theme-color" content="#132b55" />
+    <link rel="canonical" href="https://kbnstudio.github.io/tcg-battle-support-web/" />
     <link rel="icon" type="image/png" href="favicon.png" />
-
-    <title>TCGバトルサポート - ポケカ対戦ダメカン・タイマー</title>
-    <link rel="manifest" href="manifest.json" />
-
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:title" content="TCGバトルサポート - ポケカ対戦補助アプリ" />
+    <meta property="og:description" content="ダメカン・特殊状態・対戦タイマー・コイントスを、対面2人でも1人でも直感操作。" />
+    <meta property="og:url" content="https://kbnstudio.github.io/tcg-battle-support-web/" />
+    <meta property="og:image" content="https://kbnstudio.github.io/tcg-battle-support-web/icons/Icon-512.png" />
+    <meta name="twitter:card" content="summary" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -74,49 +25,52 @@
         "applicationCategory": "GameApplication",
         "operatingSystem": "Android",
         "isAccessibleForFree": true,
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "JPY"
-        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
         "url": "https://kbnstudio.github.io/tcg-battle-support-web/",
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport",
         "image": "https://kbnstudio.github.io/tcg-battle-support-web/icons/Icon-512.png",
         "inLanguage": ["ja", "en", "zh-Hant", "ko"]
       }
     </script>
-
-    <script>
-      // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "2047296399" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
-    </script>
-    <!-- This script adds the flutter initialization JS code -->
-    <script src="flutter.js" defer></script>
+    <style>
+      :root { color-scheme: light dark; --navy:#132b55; --blue:#3478db; --ink:#202b38; --muted:#5f6b7a; --paper:#fff; --surface:#f3f6fb; --line:#dce3ed; }
+      * { box-sizing:border-box; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif; line-height:1.75; }
+      .wrap { width:min(960px,calc(100% - 40px)); margin-inline:auto; }
+      header { padding:18px 0; border-bottom:1px solid var(--line); }
+      .brand { display:flex; align-items:center; gap:12px; font-weight:800; }
+      .brand img { width:42px; height:42px; border-radius:12px; }
+      .hero { padding:72px 0; background:var(--surface); }
+      .hero-grid { display:grid; grid-template-columns:1.4fr .6fr; gap:56px; align-items:center; }
+      .eyebrow { color:var(--blue); font-weight:800; letter-spacing:.08em; }
+      h1 { margin:8px 0 20px; color:var(--navy); font-size:clamp(2.2rem,6vw,4.2rem); line-height:1.15; }
+      h2 { color:var(--navy); font-size:clamp(1.6rem,4vw,2.3rem); }
+      .lead { max-width:700px; font-size:1.1rem; }
+      .cta { display:inline-block; margin-top:18px; padding:14px 22px; border-radius:999px; color:#fff; background:var(--navy); font-weight:800; text-decoration:none; box-shadow:0 8px 24px #132b5533; }
+      .app-icon { width:min(100%,240px); margin:auto; border-radius:28%; box-shadow:0 22px 50px #132b5530; }
+      section { padding:64px 0; }
+      .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+      .card { padding:22px; border:1px solid var(--line); border-radius:20px; }
+      .card h3 { margin-top:0; color:var(--navy); }
+      .card p,.note { color:var(--muted); }
+      footer { padding:28px 0; border-top:1px solid var(--line); }
+      @media (max-width:760px) { .hero-grid,.grid { grid-template-columns:1fr; } .app-icon { width:145px; grid-row:1; } .hero,section { padding:48px 0; } }
+      @media (prefers-color-scheme:dark) { :root { --ink:#edf2f8; --muted:#b9c3d0; --paper:#101722; --surface:#182231; --line:#304056; --navy:#8db7ff; } }
+    </style>
   </head>
   <body>
-    <noscript>
-      <main>
-        <h1>TCGバトルサポート</h1>
-        <p>
-          ポケカの実物対戦で使える、ダメカン・特殊状態・対戦タイマー・コイントスの非公式サポートアプリです。
-        </p>
-        <p><a href="about/">アプリの機能と使い方を見る</a></p>
-      </main>
-    </noscript>
-    <script>
-      window.addEventListener("load", function (ev) {
-        // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function (engineInitializer) {
-            engineInitializer.initializeEngine().then(function (appRunner) {
-              appRunner.runApp();
-            });
-          },
-        });
-      });
-    </script>
+    <header><div class="wrap brand"><img src="icons/Icon-192.png" alt="" /><span>TCGバトルサポート</span></div></header>
+    <main>
+      <div class="hero"><div class="wrap hero-grid">
+        <div><div class="eyebrow">ポケカの実物対戦を、もっと快適に</div><h1>スマホ1台が<br />対戦サポートツールに</h1><p class="lead">ダメカン、特殊状態、対戦タイマー、コイントスをまとめて管理。対面の2人で共有しても、1人回しでも使いやすい無料の非公式Androidアプリです。</p><a class="cta" href="https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport" rel="noopener">Google Playで無料ダウンロード</a></div>
+        <img class="app-icon" src="icons/Icon-512.png" alt="TCGバトルサポートのアプリアイコン" />
+      </div></div>
+      <section><div class="wrap"><h2>対戦に必要な道具をひとまとめ</h2><div class="grid">
+        <article class="card"><h3>ダメカン・特殊状態</h3><p>ダメージ、回復、どく・やけどなどの特殊状態を直感的に管理できます。</p></article>
+        <article class="card"><h3>タイマー・コイントス</h3><p>大会形式に合わせたタイマーと、好みのスキンを選べるコイントスを搭載しています。</p></article>
+        <article class="card"><h3>操作履歴・対戦記録</h3><p>入力ミスの巻き戻しや、過去の対戦結果の記録・振り返りに対応しています。</p></article>
+      </div><p><a href="about/">機能と使い方を詳しく見る</a></p></div></section>
+    </main>
+    <footer><div class="wrap"><p class="note">本アプリはファンによる非公式の個人開発ツールで、任天堂株式会社、株式会社クリーチャーズ、株式会社ポケモンとは関係ありません。</p></div></footer>
   </body>
 </html>
