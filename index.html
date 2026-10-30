@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TCGバトルサポート - ポケカ対戦補助アプリ</title>
-    <meta name="description" content="ポケカの実物対戦をスマホ1台でサポート。ダメカン、特殊状態、対戦タイマー、コイントス、操作履歴をまとめて管理できる無料の非公式Androidアプリです。" />
+    <meta name="description" content="ポケカの実物対戦をスマホ1台でサポート。ダメカン（ダメージカウンター）、特殊状態、対戦タイマー、コイントス、操作履歴をまとめて管理できる無料の非公式Androidアプリです。" />
     <meta name="theme-color" content="#132b55" />
     <link rel="canonical" href="https://kbnstudio.github.io/tcg-battle-support-web/" />
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -21,8 +21,8 @@
         "@type": "SoftwareApplication",
         "name": "TCGバトルサポート",
         "alternateName": "TCG Battle Support",
-        "description": "ポケカの実物対戦で使えるダメカン、特殊状態、対戦タイマー、コイントスの非公式サポートアプリです。",
-        "applicationCategory": "GameApplication",
+        "description": "ポケカの実物対戦で使えるダメカン（ダメージカウンター）、特殊状態、対戦タイマー、コイントスの非公式サポートアプリです。",
+        "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Android",
         "isAccessibleForFree": true,
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
@@ -56,20 +56,40 @@
       footer { padding:28px 0; border-top:1px solid var(--line); }
       @media (max-width:760px) { .hero-grid,.grid { grid-template-columns:1fr; } .app-icon { width:145px; grid-row:1; } .hero,section { padding:48px 0; } }
       @media (prefers-color-scheme:dark) { :root { --ink:#edf2f8; --muted:#b9c3d0; --paper:#101722; --surface:#182231; --line:#304056; --navy:#8db7ff; } }
-    </style>
+
+      .hero-grid { grid-template-columns:1.2fr .8fr; gap:40px; }
+      .hero-screen { margin:0; max-width:300px; justify-self:center; }
+      .hero-screen img,.screen img { display:block; width:100%; height:auto; border-radius:20px; }
+      figcaption,.small { margin-top:12px; color:var(--muted); font-size:.9rem; }
+      .cta { background:#132b55; color:#fff; }
+      a:not(.cta) { color:#245db2; }
+      .details { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+      .screen { max-width:300px; margin:0 auto; }
+      .soft { background:var(--surface); }
+      .coins { margin:28px 0; padding:16px; border-radius:24px; background:#101722; }
+      .coins img { width:100%; height:auto; display:block; }
+      .bottom { text-align:center; }
+      @media(max-width:760px) { .hero-grid,.details { grid-template-columns:1fr; } .hero-screen { max-width:260px; } h1 { font-size:clamp(2rem,8vw,3rem); } }
+      @media(prefers-color-scheme:dark) { .cta { background:#8db7ff; color:#101722; } a:not(.cta),.eyebrow { color:#a9caff; } }
+     .hero-grid > *, .details > *, .grid > * { min-width:0; } p,a,figcaption { overflow-wrap:anywhere; }
+</style>
   </head>
   <body>
     <header><div class="wrap brand"><img src="icons/Icon-192.png" alt="" /><span>TCGバトルサポート</span></div></header>
     <main>
       <div class="hero"><div class="wrap hero-grid">
-        <div><div class="eyebrow">ポケカの実物対戦を、もっと快適に</div><h1>スマホ1台が<br />対戦サポートツールに</h1><p class="lead">ダメカン、特殊状態、対戦タイマー、コイントスをまとめて管理。対面の2人で共有しても、1人回しでも使いやすい無料の非公式Androidアプリです。</p><a class="cta" href="https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport" rel="noopener">Google Playで無料ダウンロード</a></div>
-        <img class="app-icon" src="icons/Icon-512.png" alt="TCGバトルサポートのアプリアイコン" />
+        <div><div class="eyebrow">ポケカの実物対戦を、もっと快適に</div><h1>ダメカンも、<br />タイマーも。<br />スマホ1台に。</h1><p class="lead">向かい合った2人で使える、対戦サポートアプリ。ダメカン（ダメージカウンター）、特殊状態、タイマー、コイントスをひとつの画面で管理できます。</p><a class="cta" href="https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport" rel="noopener">Google Playで無料ダウンロード</a><p class="small">Android対応・無料（一部広告あり）<br />ファンによる非公式の対戦補助ツールです。</p></div>
+        <figure class="hero-screen"><img src="images/battle.png" alt="上下をそれぞれのプレイヤーに向け、ダメカンやタイマーを管理する対戦画面" width="1080" height="1920" fetchpriority="high" /><figcaption>スマホをテーブル中央に。お互いの側から操作できます。</figcaption></figure>
       </div></div>
-      <section><div class="wrap"><h2>対戦に必要な道具をひとまとめ</h2><div class="grid">
+      <section><div class="wrap"><h2>2人でも、1人でも。</h2><p>縦画面は向かい合った2人で共有。横画面は自分のバトル場とベンチを管理する1人用表示に切り替わります。</p><div class="grid">
         <article class="card"><h3>ダメカン・特殊状態</h3><p>ダメージ、回復、どく・やけどなどの特殊状態を直感的に管理できます。</p></article>
         <article class="card"><h3>タイマー・コイントス</h3><p>大会形式に合わせたタイマーと、好みのスキンを選べるコイントスを搭載しています。</p></article>
         <article class="card"><h3>操作履歴・対戦記録</h3><p>入力ミスの巻き戻しや、過去の対戦結果の記録・振り返りに対応しています。</p></article>
       </div><p><a href="about/">機能と使い方を詳しく見る</a></p></div></section>
+
+      <section class="soft"><div class="wrap details"><div><h2>ダメージも特殊状態も、<br />迷わず入力。</h2><p>ダメカンを10・50・100ダメージ単位で増減。どく・やけど・ねむり・マヒ・こんらんもまとめて管理できます。</p><p>特性の使用済みマーカー、サポート・エネルギーの手貼り・にげるの記録、VSTAR／GXマーカー、ロストゾーンの枚数にも対応。</p><p>25分などに設定できる対戦タイマーは、残り5分・1分に色の変化でお知らせします。</p></div><figure class="screen"><img src="images/damage.png" width="1080" height="1920" loading="lazy" alt="ダメージの増減と特殊状態を選択する入力画面" /><figcaption>回復・ダメージ・特殊状態をひとつの入力画面で。</figcaption></figure></div></section>
+      <section><div class="wrap"><h2>コイントスに、ちょっと遊び心。</h2><p>厚みと金属の光沢を持つコインが回転して表裏を表示。鑑賞画面ではドラッグして、好きな角度から眺められます。</p><figure class="coins"><img src="images/coins.png" width="1200" height="440" loading="lazy" alt="青と金のコインを正面・斜め・側面から見た描画例" /></figure><p class="small">コイン描画のサンプル。スキンによってデザインが異なります。</p><p>コインスキン、テーマカラー、背景を自分好みに。ライト／ダークモード、日本語・英語・繁体字中国語・韓国語に対応しています。</p></div></section>
+      <section class="soft bottom"><div class="wrap"><h2>次の対戦のお供に。</h2><p>実物のカードを使う対戦の横で、道具と記録をサポートします。</p><a class="cta" href="https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport">Google Playで無料ダウンロード</a><p class="small">Android対応・無料（一部広告あり）<br />カードデータベース・カードテキスト・対戦ゲーム本体は含まれていません。</p><p><a href="https://note.com/kbnstudio/n/nc63aebbe7cb9">開発者によるアプリ紹介を読む（note）</a></p></div></section>
     </main>
     <footer><div class="wrap"><p class="note">本アプリはファンによる非公式の個人開発ツールで、任天堂株式会社、株式会社クリーチャーズ、株式会社ポケモンとは関係ありません。</p></div></footer>
   </body>

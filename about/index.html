@@ -6,7 +6,7 @@
     <title>ポケカ対戦補助アプリ｜TCGバトルサポート</title>
     <meta
       name="description"
-      content="ポケカの対面バトルをスマホ1台でサポート。ダメカン、特殊状態、対戦タイマー、コイントス、操作履歴、対戦記録をまとめて管理できる無料の非公式Androidアプリです。"
+      content="ポケカの対面バトルをスマホ1台でサポート。ダメカン（ダメージカウンター）、特殊状態、対戦タイマー、コイントス、操作履歴、対戦記録をまとめて管理できる無料の非公式Androidアプリです。"
     />
     <meta name="theme-color" content="#132B55" />
     <link
@@ -36,8 +36,8 @@
         "@type": "SoftwareApplication",
         "name": "TCGバトルサポート",
         "alternateName": "TCG Battle Support",
-        "description": "ポケカの対面バトルで使えるダメカン、特殊状態、対戦タイマー、コイントスの非公式サポートアプリです。",
-        "applicationCategory": "GameApplication",
+        "description": "ポケカの対面バトルで使えるダメカン（ダメージカウンター）、特殊状態、対戦タイマー、コイントスの非公式サポートアプリです。",
+        "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Android",
         "isAccessibleForFree": true,
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
@@ -119,7 +119,9 @@
         :root { --ink: #edf2f8; --muted: #b9c3d0; --paper: #101722; --surface: #182231; --line: #304056; }
         .hero { background: var(--surface); }
       }
-    </style>
+@media(prefers-color-scheme:dark) { :root { --navy:#a9caff; --blue:#a9caff; } .cta { background:#8db7ff; color:#101722; } }
+     .hero-grid > *, .details > *, .grid > * { min-width:0; } p,a,figcaption { overflow-wrap:anywhere; }
+</style>
   </head>
   <body>
     <header>
@@ -138,7 +140,7 @@
             <div class="eyebrow">ポケカの実物対戦を、もっと快適に</div>
             <h1>スマホ1台が<br />対戦サポートツールに</h1>
             <p class="lead">
-              ダメカン、特殊状態、対戦タイマー、コイントスをまとめて管理。
+              ダメカン（ダメージカウンター）、特殊状態、対戦タイマー、コイントスをまとめて管理。
               対面の2人で共有しても、1人回しでも使いやすい無料の非公式Androidアプリです。
             </p>
             <a
@@ -168,7 +170,7 @@
           <div class="grid">
             <article class="card"><h3>ダメカン・特殊状態</h3><p>10・50・100単位のダメージと回復、どく・やけど・ねむり・マヒ・こんらんを直感的に管理できます。</p></article>
             <article class="card"><h3>対戦タイマー</h3><p>25分など大会形式に合わせたカウントダウン。残り時間を色の変化でも知らせます。</p></article>
-            <article class="card"><h3>コイントス</h3><p>物理コインがなくてもすぐ表裏を判定。好みのコインスキンへの着せ替えにも対応しています。</p></article>
+            <article class="card"><h3>コイントス</h3><p>物理コインがなくてもすぐ表裏を判定。厚みと金属の光沢を持つ立体コインや、好みのコインスキンへの着せ替えにも対応しています。</p></article>
             <article class="card"><h3>ターン内アクション</h3><p>サポート、エネルギーの手貼り、にげるを記録し、ターン終了時にリセットできます。</p></article>
             <article class="card"><h3>操作履歴・対戦記録</h3><p>入力ミスを巻き戻せる操作履歴と、過去の対戦を振り返るための記録機能を備えています。</p></article>
             <article class="card"><h3>自分好みの表示</h3><p>テーマカラー、背景、ライト／ダークモード、コインスキンで盤面をカスタマイズできます。</p></article>
@@ -189,7 +191,7 @@
       <section class="soft">
         <div class="wrap intro">
           <h2>ポケカ対戦のお供に</h2>
-          <p>日本語、英語、繁体字中国語、韓国語に対応。基本機能は無料で利用できます。</p>
+          <p>日本語、英語、繁体字中国語、韓国語に対応。無料で利用でき、開発・運営の継続のため一部広告を表示しています。</p>
           <a
             class="cta"
             href="https://play.google.com/store/apps/details?id=com.kbnstudio.tcgbattlesupport"
